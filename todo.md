@@ -16,10 +16,10 @@
 - [x] Create language switcher shared component
 
 ## Phase 3: Style System Core
-- [ ] Create `lib/style-registry.ts` (style name → component set mapping)
-- [ ] Create `hooks/use-style.ts` (style preference + localStorage persistence)
-- [ ] Create style switcher shared component
-- [ ] Define shared section component interface (HeroSection, AboutSection, BlogSection, ProjectsSection, Footer)
+- [x] Create `lib/style-registry.ts` (style name → component set mapping)
+- [x] Create `hooks/use-style.tsx` (style preference + localStorage persistence)
+- [x] Create style switcher shared component
+- [x] Define shared section component interface (HeroSection, AboutSection, BlogSection, ProjectsSection, Footer)
 
 ## Phase 4: Minimal Style
 - [ ] Create `components/styles/minimal/Navigation.tsx`

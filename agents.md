@@ -39,6 +39,10 @@
 - `config/projects.ts` — project data.
 - **No hardcoded text in components** — all strings come from config or i18n files.
 
+## Workflow
+
+- **Before every `git commit`**, launch a subagent (Task tool, `explore` type) to review the full `git diff`. Address any issues found before committing.
+
 ## Code Rules
 
 - **No comments** in code unless explicitly requested.

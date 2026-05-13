@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/components/shared/LanguageProvider";
+import { StyleProvider } from "@/hooks/use-style";
 
 export const metadata: Metadata = {
   title: "Personal Homepage",
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          <StyleProvider>{children}</StyleProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

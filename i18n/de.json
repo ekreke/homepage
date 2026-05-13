@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "about": "Über mich",
+    "blog": "Blog",
+    "projects": "Projekte",
+    "chat": "Chat"
+  },
+  "hero": {
+    "tagline": "UI/UX Designer & Entwickler",
+    "cta": "Kontakt aufnehmen"
+  },
+  "about": {
+    "title": "Über mich",
+    "skills": "Kernkompetenzen",
+    "story": "Meine Geschichte"
+  },
+  "blog": {
+    "title": "Neueste Artikel",
+    "readAll": "Alle Artikel lesen",
+    "readMore": "Weiterlesen",
+    "backToList": "Zurück zum Blog"
+  },
+  "projects": {
+    "title": "Ausgewählte Projekte",
+    "viewProject": "Projekt ansehen",
+    "viewAll": "Alle Projekte ansehen"
+  },
+  "footer": {
+    "copyright": "© 2025 John Paul. Alle Rechte vorbehalten.",
+    "madeWith": "Gemacht mit",
+    "and": "und"
+  },
+  "chat": {
+    "title": "Mit AI chatten",
+    "placeholder": "Frag mich alles...",
+    "welcome": "Hallo! Ich bin ein KI-Assistent für John Paul. Frag mich alles über seine Arbeit, Fähigkeiten oder Projekte.",
+    "send": "Senden",
+    "thinking": "Denke nach..."
+  },
+  "common": {
+    "darkMode": "Dunkelmodus umschalten",
+    "language": "Sprache",
+    "style": "Stil"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "about": "關於我",
+    "blog": "部落格",
+    "projects": "專案",
+    "chat": "聊天"
+  },
+  "hero": {
+    "tagline": "UI/UX 設計師與開發者",
+    "cta": "聯絡我"
+  },
+  "about": {
+    "title": "關於我",
+    "skills": "核心技能",
+    "story": "我的故事"
+  },
+  "blog": {
+    "title": "最新文章",
+    "readAll": "閱讀所有文章",
+    "readMore": "閱讀更多",
+    "backToList": "返回部落格列表"
+  },
+  "projects": {
+    "title": "精選專案",
+    "viewProject": "查看專案",
+    "viewAll": "查看所有專案"
+  },
+  "footer": {
+    "copyright": "© 2025 John Paul. 保留所有權利。",
+    "madeWith": "使用",
+    "and": "和"
+  },
+  "chat": {
+    "title": "與 AI 聊天",
+    "placeholder": "問我任何問題...",
+    "welcome": "你好！我是 John Paul 的 AI 助手。可以問我關於他的工作、技能或專案的任何問題。",
+    "send": "發送",
+    "thinking": "思考中..."
+  },
+  "common": {
+    "darkMode": "切換深色模式",
+    "language": "語言",
+    "style": "風格"
+  }
+}

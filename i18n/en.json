@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "about": "About Me",
+    "blog": "Blog",
+    "projects": "Projects",
+    "chat": "Chat"
+  },
+  "hero": {
+    "tagline": "UI/UX Designer & Developer",
+    "cta": "Let's Connect"
+  },
+  "about": {
+    "title": "About Me",
+    "skills": "Core Skills",
+    "story": "My Story"
+  },
+  "blog": {
+    "title": "Latest Articles",
+    "readAll": "Read All Articles",
+    "readMore": "Read More",
+    "backToList": "Back to Blog"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "viewProject": "View Project",
+    "viewAll": "View All Projects"
+  },
+  "footer": {
+    "copyright": "© 2025 John Paul. All rights reserved.",
+    "madeWith": "Made with",
+    "and": "and"
+  },
+  "chat": {
+    "title": "Chat with AI",
+    "placeholder": "Ask me anything...",
+    "welcome": "Hi! I'm an AI assistant for John Paul. Ask me anything about his work, skills, or projects.",
+    "send": "Send",
+    "thinking": "Thinking..."
+  },
+  "common": {
+    "darkMode": "Toggle dark mode",
+    "language": "Language",
+    "style": "Style"
+  }
+}

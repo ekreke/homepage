@@ -10,10 +10,10 @@
 - [x] Verify Vercel one-click deploy still works
 
 ## Phase 2: i18n System
-- [ ] Create `config/i18n.ts` (supported languages, defaults)
-- [ ] Create translation files: `i18n/en.json`, `i18n/zh.json`, `i18n/zh-TW.json`, `i18n/de.json`
-- [ ] Implement language context provider
-- [ ] Create language switcher shared component
+- [x] Create `config/i18n.ts` (supported languages, defaults)
+- [x] Create translation files: `i18n/en.json`, `i18n/zh.json`, `i18n/zh-TW.json`, `i18n/de.json`
+- [x] Implement language context provider
+- [x] Create language switcher shared component
 
 ## Phase 3: Style System Core
 - [ ] Create `lib/style-registry.ts` (style name → component set mapping)

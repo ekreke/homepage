@@ -13,15 +13,17 @@ Each phase in `todo.md` maps to testable criteria below. Tests live in `tests/` 
   - [ ] `tsconfig.json` has `"strict": true`
   - [ ] `tailwind.config.ts` exists with correct content paths
   - [ ] `npm run build` succeeds without errors
-
-### 1.2 Project Structure
-- **File**: `tests/phase-1-setup.test.ts`
-- **Verify**:
-  - [ ] All directories exist: `app/`, `components/`, `config/`, `content/`, `hooks/`, `i18n/`, `lib/`, `public/`
+  - [ ] All required directories exist: `app/`, `components/`, `config/`, `content/`, `hooks/`, `i18n/`, `lib/`, `public/`
   - [ ] `config/site.ts` exports site metadata (name, tagline, bio, skills, links)
+  - [ ] `config/blog-sources.ts` exists (placeholder)
+  - [ ] `config/i18n.ts` exists (placeholder)
+  - [ ] `config/projects.ts` exports project data
+  - [ ] `src/` directory does NOT exist (migrated to app/)
+  - [ ] `vite.config.ts` does NOT exist
+  - [ ] `index.html` (root level) does NOT exist
   - [ ] `README.md` contains "Deploy with Vercel" button link
 
-### 1.3 Build Verification
+### 1.2 Build Verification
 - **Command**: `npm run build && npm run start`
 - **Verify**:
   - [ ] `npm run build` completes successfully

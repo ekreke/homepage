@@ -1,12 +1,13 @@
 # TODO - Task List
 
 ## Phase 1: Project Setup
-- [ ] Migrate from Vite to Next.js (App Router)
-- [ ] Configure TypeScript strict mode
-- [ ] Configure Tailwind CSS
-- [ ] Create project directory structure
-- [ ] Set up `config/site.ts` with personal data
-- [ ] Verify Vercel one-click deploy still works
+- [x] Migrate from Vite to Next.js (App Router)
+- [x] Configure TypeScript strict mode
+- [x] Configure Tailwind CSS
+- [x] Set up `config/site.ts` with personal data
+- [x] Set up `config/projects.ts` with project data
+- [x] Create placeholder configs (`blog-sources.ts`, `i18n.ts`)
+- [x] Verify Vercel one-click deploy still works
 
 ## Phase 2: i18n System
 - [ ] Create `config/i18n.ts` (supported languages, defaults)

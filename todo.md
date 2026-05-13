@@ -22,13 +22,13 @@
 - [x] Define shared section component interface (HeroSection, AboutSection, BlogSection, ProjectsSection, Footer)
 
 ## Phase 4: Minimal Style
-- [ ] Create `components/styles/minimal/Navigation.tsx`
-- [ ] Create `components/styles/minimal/HeroSection.tsx` (big name + tagline + CTA)
-- [ ] Create `components/styles/minimal/AboutSection.tsx` (bio + skills + story)
-- [ ] Create `components/styles/minimal/BlogSection.tsx` (article list, minimal layout)
-- [ ] Create `components/styles/minimal/ProjectsSection.tsx` (project list, minimal layout)
-- [ ] Create `components/styles/minimal/Footer.tsx`
-- [ ] Create `components/styles/minimal/index.ts` (export all)
+- [x] Create `components/styles/minimal/Navigation.tsx`
+- [x] Create `components/styles/minimal/HeroSection.tsx` (big name + tagline + CTA)
+- [x] Create `components/styles/minimal/AboutSection.tsx` (bio + skills + story)
+- [x] Create `components/styles/minimal/BlogSection.tsx` (article list, minimal layout)
+- [x] Create `components/styles/minimal/ProjectsSection.tsx` (project list, minimal layout)
+- [x] Create `components/styles/minimal/Footer.tsx`
+- [x] Create `components/styles/minimal/index.ts` (export all)
 
 ## Phase 5: Card Style
 - [ ] Create `components/styles/card/Navigation.tsx`

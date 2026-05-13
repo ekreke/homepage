@@ -38,7 +38,9 @@
     "thinking": "Thinking..."
   },
   "common": {
-    "darkMode": "Toggle dark mode",
+    "back": "Back",
+    "loading": "Loading...",
+    "darkMode": "Dark Mode",
     "language": "Language",
     "style": "Style"
   }

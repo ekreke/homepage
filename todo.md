@@ -60,10 +60,10 @@
 - [x] Verify RSS fetch and local cache write on first build
 
 ## Phase 8: Homepage Assembly
-- [ ] Create `app/page.tsx` (style switcher + dynamic section rendering)
-- [ ] Create `app/layout.tsx` (root layout with providers)
-- [ ] Create `app/projects/page.tsx` (projects page)
-- [ ] Wire up navigation links between pages
+- [x] Create `app/page.tsx` (style switcher + dynamic section rendering)
+- [x] Create `app/layout.tsx` (root layout with providers)
+- [x] Create `app/projects/page.tsx` (projects page)
+- [x] Wire up navigation links between pages
 
 ## Phase 9: Polish & Deploy
 - [ ] Dark mode support across all styles

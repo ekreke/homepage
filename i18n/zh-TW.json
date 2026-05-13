@@ -38,7 +38,9 @@
     "thinking": "思考中..."
   },
   "common": {
-    "darkMode": "切換深色模式",
+    "back": "返回",
+    "loading": "載入中...",
+    "darkMode": "深色模式",
     "language": "語言",
     "style": "風格"
   }

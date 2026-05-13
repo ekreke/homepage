@@ -38,7 +38,9 @@
     "thinking": "Denke nach..."
   },
   "common": {
-    "darkMode": "Dunkelmodus umschalten",
+    "back": "Zurück",
+    "loading": "Laden...",
+    "darkMode": "Dark Mode",
     "language": "Sprache",
     "style": "Stil"
   }

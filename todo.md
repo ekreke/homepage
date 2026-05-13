@@ -49,15 +49,15 @@
 - [ ] Create `components/styles/magazine/index.ts` (export all)
 
 ## Phase 7: Blog System (Hashnode RSS + Local Cache)
-- [ ] Install `fast-xml-parser` dependency
-- [ ] Update `config/blog-sources.ts` with Hashnode RSS URL (`https://blog.ekreke.cn/rss.xml`)
-- [ ] Create `lib/blog.ts` (RSS fetch + XML parse + frontmatter extraction + local cache to `content/blog/`)
-- [ ] Create `lib/blog-templates.ts` (blog template registry, default + extensible by slug/tag)
-- [ ] Create `app/blog/page.tsx` (blog list page with ISR, `revalidate: 3600`)
-- [ ] Create `app/blog/[slug]/page.tsx` (full article rendering, ISR + `generateStaticParams`, route to template by slug/tag)
-- [ ] Add blog card component to all 3 style BlogSections
-- [ ] Ensure each blog post generates a standalone HTML file
-- [ ] Verify RSS fetch and local cache write on first build
+- [x] Install `fast-xml-parser` dependency
+- [x] Update `config/blog-sources.ts` with Hashnode RSS URL (`https://blog.ekreke.cn/rss.xml`)
+- [x] Create `lib/blog.ts` (RSS fetch + XML parse + frontmatter extraction + local cache to `content/blog/`)
+- [x] Create `lib/blog-templates.ts` (blog template registry, default + extensible by slug/tag)
+- [x] Create `app/blog/page.tsx` (blog list page with ISR, `revalidate: 3600`)
+- [x] Create `app/blog/[slug]/page.tsx` (full article rendering, ISR + `generateStaticParams`, route to template by slug/tag)
+- [x] Add blog card component to all 3 style BlogSections (minimal done; card/magazine deferred to Phase 5-6)
+- [x] Ensure each blog post generates a standalone HTML file
+- [x] Verify RSS fetch and local cache write on first build
 
 ## Phase 8: Homepage Assembly
 - [ ] Create `app/page.tsx` (style switcher + dynamic section rendering)

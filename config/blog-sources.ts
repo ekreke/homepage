@@ -7,6 +7,7 @@ export interface BlogSourceConfig {
 
 export const blogSources: BlogSourceConfig[] = [
   {
-    type: "local",
+    type: "rss",
+    endpoint: "https://blog.ekreke.cn/rss.xml",
   },
 ];

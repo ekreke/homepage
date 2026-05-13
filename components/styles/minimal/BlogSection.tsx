@@ -1,34 +1,31 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/components/shared/LanguageProvider";
 import { siteConfig } from "@/config/site";
 
-const placeholderPosts = [
-  {
-    title: "Getting Started with Design Systems",
-    date: "2025-01-15",
-    slug: "getting-started-design-systems",
-    excerpt:
-      "A comprehensive guide to building and maintaining design systems that scale across products and teams.",
-  },
-  {
-    title: "The Art of Minimal UI Design",
-    date: "2025-01-10",
-    slug: "art-minimal-ui-design",
-    excerpt:
-      "Exploring the principles of minimalism in user interface design and how less truly becomes more.",
-  },
-  {
-    title: "React Performance Patterns",
-    date: "2025-01-05",
-    slug: "react-performance-patterns",
-    excerpt:
-      "Deep dive into React performance optimization techniques that make your apps lightning fast.",
-  },
-];
+interface PostSummary {
+  title: string;
+  slug: string;
+  date: string;
+  excerpt: string;
+  tags: string[];
+  coverImage: string;
+  originalUrl: string;
+}
 
 export function BlogSection() {
   const { t } = useLanguage();
+  const [posts, setPosts] = useState<PostSummary[]>([]);
+
+  useEffect(() => {
+    fetch("/api/blog")
+      .then((res) => res.json())
+      .then((data) => setPosts((data.posts ?? []).slice(0, 5)))
+      .catch(() => {});
+  }, []);
+
+  if (posts.length === 0) return null;
 
   return (
     <section id="blog" className="px-6 py-24">
@@ -38,7 +35,7 @@ export function BlogSection() {
         </h2>
 
         <div className="mt-10 space-y-6">
-          {placeholderPosts.map((post) => (
+          {posts.map((post) => (
             <a
               key={post.slug}
               href={`/blog/${post.slug}`}

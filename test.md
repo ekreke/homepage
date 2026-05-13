@@ -151,28 +151,41 @@ Each phase in `todo.md` maps to testable criteria below. Tests live in `tests/` 
 
 ---
 
-## Phase 7: Blog System
+## Phase 7: Blog System (Hashnode RSS + Local Cache)
 
-### 7.1 Content & Config
+### 7.1 RSS Integration
 - **File**: `tests/phase-7-blog.test.ts`
 - **Verify**:
-  - [ ] `content/blog/` directory exists with at least 1 `.md` file
-  - [ ] Each markdown file has valid frontmatter (title, date, slug)
-  - [ ] `config/blog-sources.ts` exports an adapter configuration
-  - [ ] `lib/blog.ts` exports functions: `getAllPosts()`, `getPostBySlug(slug)`
+  - [ ] `lib/blog.ts` exports `getAllPosts()` that returns array of post objects
+  - [ ] `lib/blog.ts` exports `getPostBySlug(slug)` that returns a single post
+  - [ ] Each post object has: title, slug, date, excerpt, content (HTML), tags, coverImage, originalUrl
+  - [ ] `config/blog-sources.ts` contains Hashnode RSS URL (`https://blog.ekreke.cn/rss.xml`)
+  - [ ] RSS fetch succeeds and returns valid data from `https://blog.ekreke.cn/rss.xml`
+  - [ ] `content/blog/` directory contains cached `.md` files after first fetch
+  - [ ] Each cached `.md` file has valid frontmatter (title, slug, date, tags, coverImage, originalUrl)
+  - [ ] `getAllPosts()` reads from local cache when available, fetches from RSS when not
 
-### 7.2 Pages
+### 7.2 Blog Template System
 - **File**: `tests/phase-7-blog.test.ts`
 - **Verify**:
-  - [ ] `app/blog/page.tsx` exists and renders post list
+  - [ ] `lib/blog-templates.ts` exports a template registry
+  - [ ] Default template exists and renders standard blog layout
+  - [ ] Template can be selected by slug or tag (extensible)
+
+### 7.3 Pages
+- **File**: `tests/phase-7-blog.test.ts`
+- **Verify**:
+  - [ ] `app/blog/page.tsx` exists and renders post list with ISR `revalidate: 3600`
   - [ ] `app/blog/[slug]/page.tsx` exists with `generateStaticParams` export
+  - [ ] Blog post page renders full HTML content from cached markdown
+  - [ ] Blog post page routes to appropriate template by slug/tag
 
-### 7.3 SSG Output
+### 7.4 SSG + ISR Output
 - **Command**: `npm run build`
 - **Verify**:
   - [ ] Build succeeds
   - [ ] Each blog post has a corresponding `.html` file in `.next/server/app/blog/`
-  - [ ] Each HTML file contains post title in `<title>` or `<h1>` tag
+  - [ ] ISR revalidate is configured (check page output for revalidate timing)
   - [ ] Each HTML file is a standalone page with metadata
 
 ---
@@ -234,3 +247,40 @@ Each phase in `todo.md` maps to testable criteria below. Tests live in `tests/` 
   - [ ] Accessibility score >= 90
   - [ ] Best Practices score >= 90
   - [ ] SEO score >= 90
+
+---
+
+## Phase 10: Personal AI Agent
+
+### 10.1 Configuration
+- **File**: `tests/phase-10-ai-agent.test.ts`
+- **Verify**:
+  - [ ] `config/ai-agent.ts` exports systemPrompt string
+  - [ ] `config/ai-agent.ts` exports suggestedQuestions array
+  - [ ] systemPrompt includes site owner's name and bio
+  - [ ] `lib/chat.ts` exports a sendMessage function
+
+### 10.2 Chat UI
+- **File**: `tests/phase-10-ai-agent.test.ts`
+- **Verify**:
+  - [ ] `app/chat/page.tsx` exists
+  - [ ] `components/chat/ChatContainer.tsx` exists
+  - [ ] `components/chat/ChatMessage.tsx` exists
+  - [ ] `components/chat/ChatInput.tsx` exists
+  - [ ] `components/chat/ChatWelcome.tsx` exists
+  - [ ] ChatMessage distinguishes user vs assistant messages
+  - [ ] ChatWelcome displays suggested questions
+  - [ ] Chat input sends message and shows response
+
+### 10.3 Navigation
+- **Verify**:
+  - [ ] All 3 style Navigation components include link to /chat
+  - [ ] /chat page loads without errors
+
+### 10.4 Persistence
+- **Verify**:
+  - [ ] Chat history persists after page reload (localStorage)
+
+### 10.5 Style Adaptation
+- **Verify**:
+  - [ ] Chat page UI adapts to current selected style (minimal/card/magazine)

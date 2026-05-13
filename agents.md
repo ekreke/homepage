@@ -26,20 +26,28 @@ homepage/
 │   ├── blog/
 │   │   ├── page.tsx
 │   │   └── [slug]/page.tsx
+│   ├── chat/
+│   │   └── page.tsx
 │   └── projects/page.tsx
 ├── components/
 │   ├── styles/
 │   │   ├── minimal/
 │   │   ├── card/
 │   │   └── magazine/
+│   ├── chat/
+│   │   ├── ChatContainer.tsx
+│   │   ├── ChatMessage.tsx
+│   │   ├── ChatInput.tsx
+│   │   └── ChatWelcome.tsx
 │   ├── shared/
 │   └── ui/
 ├── config/
 │   ├── site.ts
 │   ├── blog-sources.ts
 │   ├── projects.ts
-│   └── i18n.ts
-├── content/blog/
+│   ├── i18n.ts
+│   └── ai-agent.ts
+├── content/blog/          # Cached blog posts synced from Hashnode RSS
 ├── hooks/use-style.ts
 ├── i18n/
 │   ├── en.json
@@ -47,7 +55,9 @@ homepage/
 │   ├── zh-TW.json
 │   └── de.json
 ├── lib/
-│   ├── blog.ts
+│   ├── blog.ts            # RSS fetch + XML parse + local cache
+│   ├── blog-templates.ts  # Blog template registry (default + per slug/tag)
+│   ├── chat.ts
 │   └── style-registry.ts
 ├── public/images/
 ├── tests/
@@ -69,6 +79,14 @@ homepage/
 - `config/blog-sources.ts` - Third-party blog source adapters
 - `config/i18n.ts` - Supported languages and default
 
+### Blog System
+- `config/blog-sources.ts` - Hashnode RSS feed URL and adapter config
+- `lib/blog.ts` - RSS fetch, XML parse, frontmatter extraction, local cache to `content/blog/`
+- `lib/blog-templates.ts` - Blog template registry (default + extensible by slug/tag)
+- `content/blog/` - Cached markdown files synced from Hashnode RSS (ISR refresh every hour)
+- `app/blog/page.tsx` - Blog list page with ISR
+- `app/blog/[slug]/page.tsx` - Full article rendering with template routing
+
 ### Style System
 - `lib/style-registry.ts` - Registers available styles, maps to component sets
 - `hooks/use-style.ts` - Persists user's style preference (localStorage)
@@ -77,3 +95,9 @@ homepage/
 ### i18n
 - `i18n/*.json` - Translation files per language
 - `config/i18n.ts` - Language list and defaults
+
+### AI Agent
+- `config/ai-agent.ts` - System prompt, suggested questions, knowledge config
+- `lib/chat.ts` - AI interface abstraction (mock mode, swap to real API later)
+- `components/chat/` - Chat UI components (ChatContainer, ChatMessage, ChatInput, ChatWelcome)
+- `app/chat/page.tsx` - Standalone chat page at `/chat`

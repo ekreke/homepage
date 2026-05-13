@@ -48,13 +48,16 @@
 - [ ] Create `components/styles/magazine/Footer.tsx`
 - [ ] Create `components/styles/magazine/index.ts` (export all)
 
-## Phase 7: Blog System
-- [ ] Create `content/blog/` with sample markdown posts
-- [ ] Create `config/blog-sources.ts` (adapter pattern, initial: local markdown)
-- [ ] Create `lib/blog.ts` (markdown parsing, frontmatter extraction)
-- [ ] Create `app/blog/page.tsx` (blog list page)
-- [ ] Create `app/blog/[slug]/page.tsx` (individual post, SSG with generateStaticParams)
+## Phase 7: Blog System (Hashnode RSS + Local Cache)
+- [ ] Install `fast-xml-parser` dependency
+- [ ] Update `config/blog-sources.ts` with Hashnode RSS URL (`https://blog.ekreke.cn/rss.xml`)
+- [ ] Create `lib/blog.ts` (RSS fetch + XML parse + frontmatter extraction + local cache to `content/blog/`)
+- [ ] Create `lib/blog-templates.ts` (blog template registry, default + extensible by slug/tag)
+- [ ] Create `app/blog/page.tsx` (blog list page with ISR, `revalidate: 3600`)
+- [ ] Create `app/blog/[slug]/page.tsx` (full article rendering, ISR + `generateStaticParams`, route to template by slug/tag)
+- [ ] Add blog card component to all 3 style BlogSections
 - [ ] Ensure each blog post generates a standalone HTML file
+- [ ] Verify RSS fetch and local cache write on first build
 
 ## Phase 8: Homepage Assembly
 - [ ] Create `app/page.tsx` (style switcher + dynamic section rendering)
@@ -68,3 +71,15 @@
 - [ ] Verify SSG output (each blog post = independent HTML)
 - [ ] Verify Vercel deployment
 - [ ] Performance audit (Lighthouse)
+
+## Phase 10: Personal AI Agent
+- [ ] Create `config/ai-agent.ts` (system prompt, suggested questions, knowledge config)
+- [ ] Create `lib/chat.ts` (AI interface abstraction, mock mode)
+- [ ] Create `components/chat/ChatMessage.tsx` (message bubble component)
+- [ ] Create `components/chat/ChatInput.tsx` (input field + send button)
+- [ ] Create `components/chat/ChatWelcome.tsx` (welcome screen with suggested questions)
+- [ ] Create `components/chat/ChatContainer.tsx` (message list + scroll + auto-resize)
+- [ ] Create `app/chat/page.tsx` (standalone chat page)
+- [ ] Add Chat link to all 3 style Navigation components
+- [ ] Add chat message persistence (localStorage)
+- [ ] Ensure chat UI adapts to current style (minimal/card/magazine)

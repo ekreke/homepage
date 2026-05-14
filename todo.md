@@ -31,22 +31,22 @@
 - [x] Create `components/styles/minimal/index.ts` (export all)
 
 ## Phase 5: Card Style
-- [ ] Create `components/styles/card/Navigation.tsx`
-- [ ] Create `components/styles/card/HeroSection.tsx` (card-based intro)
-- [ ] Create `components/styles/card/AboutSection.tsx` (skill cards + bio card)
-- [ ] Create `components/styles/card/BlogSection.tsx` (blog card grid)
-- [ ] Create `components/styles/card/ProjectsSection.tsx` (project card grid)
-- [ ] Create `components/styles/card/Footer.tsx`
-- [ ] Create `components/styles/card/index.ts` (export all)
+- [x] Create `components/styles/card/Navigation.tsx`
+- [x] Create `components/styles/card/HeroSection.tsx` (card-based intro)
+- [x] Create `components/styles/card/AboutSection.tsx` (skill cards + bio card)
+- [x] Create `components/styles/card/BlogSection.tsx` (blog card grid)
+- [x] Create `components/styles/card/ProjectsSection.tsx` (project card grid)
+- [x] Create `components/styles/card/Footer.tsx`
+- [x] Create `components/styles/card/index.ts` (export all)
 
 ## Phase 6: Magazine Style
-- [ ] Create `components/styles/magazine/Navigation.tsx`
-- [ ] Create `components/styles/magazine/HeroSection.tsx` (editorial hero with large image)
-- [ ] Create `components/styles/magazine/AboutSection.tsx` (magazine-style feature layout)
-- [ ] Create `components/styles/magazine/BlogSection.tsx` (magazine article grid)
-- [ ] Create `components/styles/magazine/ProjectsSection.tsx` (featured project spread)
-- [ ] Create `components/styles/magazine/Footer.tsx`
-- [ ] Create `components/styles/magazine/index.ts` (export all)
+- [x] Create `components/styles/magazine/Navigation.tsx`
+- [x] Create `components/styles/magazine/HeroSection.tsx` (editorial hero with large image)
+- [x] Create `components/styles/magazine/AboutSection.tsx` (magazine-style feature layout)
+- [x] Create `components/styles/magazine/BlogSection.tsx` (magazine article grid)
+- [x] Create `components/styles/magazine/ProjectsSection.tsx` (featured project spread)
+- [x] Create `components/styles/magazine/Footer.tsx`
+- [x] Create `components/styles/magazine/index.ts` (export all)
 
 ## Phase 7: Blog System (Hashnode RSS + Local Cache)
 - [x] Install `fast-xml-parser` dependency

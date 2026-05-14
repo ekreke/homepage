@@ -152,3 +152,47 @@
 .minimal-breathe {
   animation: minimalBreathe 2.5s ease-in-out infinite;
 }
+
+@keyframes cardBounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes cardFloat {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(10px, -15px); }
+  50% { transform: translate(-5px, 5px); }
+  75% { transform: translate(15px, 10px); }
+}
+
+@keyframes cardGlow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes cardCountUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card-bounce-in {
+  animation: cardBounceIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.card-float {
+  animation: cardFloat 8s ease-in-out infinite;
+}
+
+.card-glow {
+  animation: cardGlow 4s ease-in-out infinite;
+}

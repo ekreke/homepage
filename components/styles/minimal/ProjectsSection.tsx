@@ -1,72 +1,167 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/components/shared/LanguageProvider";
 import { projects } from "@/config/projects";
 
+function useInView(threshold = 0.15) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setInView(true);
+      },
+      { threshold }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [threshold]);
+
+  return { ref, inView };
+}
+
 export function ProjectsSection() {
   const { t } = useLanguage();
+  const { ref: sectionRef, inView } = useInView(0.1);
 
   return (
-    <section id="projects" className="px-6 py-24">
-      <div className="mx-auto max-w-3xl">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-          {t.projects.title}
-        </h2>
+    <section
+      id="projects"
+      ref={sectionRef}
+      className="px-6 py-32"
+      style={{ background: "#f8fafc" }}
+    >
+      <div className="mx-auto max-w-4xl">
+        <div
+          className="mb-12 flex items-end justify-between"
+          style={{
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateY(0)" : "translateY(20px)",
+            transition: "all 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
+          }}
+        >
+          <div>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400">
+              Work
+            </span>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              {t.projects.title}
+            </h2>
+          </div>
+        </div>
 
-        <div className="mt-10 space-y-8">
-          {projects.map((project) => (
-            <article
+        <div className="grid gap-6 sm:grid-cols-2">
+          {projects.map((project, i) => (
+            <ProjectCard
               key={project.title}
-              className="group border-b border-gray-100 pb-8 last:border-0 dark:border-gray-800"
-            >
-              <div className="flex items-start justify-between gap-4">
-                <div className="min-w-0 flex-1">
-                  <h3 className="text-lg font-semibold text-gray-900 transition-colors duration-200 group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400">
-                    {project.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-                    {project.description}
-                  </p>
-                  <div className="mt-3 flex flex-wrap gap-1.5">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-600 dark:bg-gray-800 dark:text-gray-400"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                {project.liveUrl && (
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="shrink-0 text-gray-400 transition-colors duration-200 hover:text-gray-900 dark:hover:text-white cursor-pointer"
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    >
-                      <path d="M6 3h7v7M13 3L5 11" />
-                    </svg>
-                  </a>
-                )}
-              </div>
-            </article>
+              project={project}
+              index={i}
+              inView={inView}
+            />
           ))}
         </div>
 
-        <a
-          href="/projects"
-          className="mt-8 inline-flex items-center gap-1 text-sm font-medium text-gray-600 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white cursor-pointer"
+        <div
+          className="mt-10"
+          style={{
+            opacity: inView ? 1 : 0,
+            transition: "opacity 0.6s ease-out 0.6s",
+          }}
         >
-          {t.projects.viewAll}
+          <a
+            href="/projects"
+            className="group inline-flex items-center gap-2 text-[13px] font-medium text-slate-500 transition-colors duration-200 hover:text-slate-900"
+          >
+            {t.projects.viewAll}
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              className="transition-transform duration-200 group-hover:translate-x-1"
+            >
+              <path d="M2 6h8M6 3l3 3-3 3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProjectCard({
+  project,
+  index,
+  inView,
+}: {
+  project: (typeof projects)[0];
+  index: number;
+  inView: boolean;
+}) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <article
+      className="group cursor-pointer overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 hover:border-slate-300 hover:shadow-lg hover:shadow-slate-200/50"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView ? "translateY(0)" : "translateY(30px)",
+        transition: `all 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${0.1 + index * 0.1}s`,
+      }}
+    >
+      <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="h-full w-full object-cover transition-transform duration-500"
+          style={{
+            transform: hovered ? "scale(1.03)" : "scale(1)",
+          }}
+        />
+        <div
+          className="absolute inset-0 bg-slate-900/0 transition-all duration-300"
+          style={{
+            background: hovered
+              ? "linear-gradient(to top, rgba(15,23,42,0.5) 0%, transparent 50%)"
+              : "transparent",
+          }}
+        />
+        <div
+          className="absolute bottom-0 left-0 right-0 p-4 transition-all duration-300"
+          style={{
+            opacity: hovered ? 1 : 0,
+            transform: hovered ? "translateY(0)" : "translateY(8px)",
+          }}
+        >
+          <div className="flex flex-wrap gap-1.5">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded bg-white/20 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-white backdrop-blur-sm"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="p-5">
+        <h3 className="text-[15px] font-semibold text-slate-900 transition-colors duration-200 group-hover:text-slate-700">
+          {project.title}
+        </h3>
+        <p className="mt-1.5 text-[13px] leading-relaxed text-slate-500 line-clamp-2">
+          {project.description}
+        </p>
+        <div className="mt-4 flex items-center gap-1.5 text-[12px] font-medium text-slate-400 transition-colors duration-200 group-hover:text-slate-600"
+        >
+          <span>View</span>
           <svg
             width="12"
             height="12"
@@ -74,11 +169,12 @@ export function ProjectsSection() {
             fill="none"
             stroke="currentColor"
             strokeWidth="1.5"
+            className="transition-transform duration-200 group-hover:translate-x-0.5"
           >
-            <path d="M2 6h8M7 3l3 3-3 3" />
+            <path d="M3 6h6M6 3l3 3-3 3" />
           </svg>
-        </a>
+        </div>
       </div>
-    </section>
+    </article>
   );
 }

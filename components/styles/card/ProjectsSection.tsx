@@ -86,7 +86,7 @@ export function ProjectsSection() {
             transition: "all 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
         >
-          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-violet-500">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-500">
             Work
           </span>
           <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
@@ -98,17 +98,17 @@ export function ProjectsSection() {
           {projects.map((project, i) => (
             <TiltCard
               key={project.title}
-              className={`rounded-3xl bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_40px_rgb(139,92,246,0.12)] hover:border-violet-200 border border-transparent overflow-hidden ${
+              className={`card-shimmer-border rounded-3xl bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_40px_rgb(59,130,246,0.12)] hover:border-blue-200 border border-transparent overflow-hidden ${
                 i === 0 ? "sm:col-span-2 lg:col-span-2" : ""
               }`}
               delay={0.1 + i * 0.1}
               inView={inView}
             >
-              <div className={`relative overflow-hidden ${i === 0 ? "aspect-[2/1]" : "aspect-[4/3]"}`}>
+              <div className={`group relative overflow-hidden ${i === 0 ? "aspect-[2/1]" : "aspect-[4/3]"}`}>
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
@@ -132,7 +132,7 @@ export function ProjectsSection() {
                 <p className="mt-1 text-[13px] leading-relaxed text-slate-500 line-clamp-2">
                   {project.description}
                 </p>
-                <div className="mt-4 flex items-center gap-1.5 text-[12px] font-medium text-violet-500"
+                <div className="mt-4 flex items-center gap-1.5 text-[12px] font-medium text-blue-500"
                 >
                   <span>View Project</span>
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -153,7 +153,7 @@ export function ProjectsSection() {
         >
           <a
             href="/projects"
-            className="group inline-flex items-center gap-2 rounded-full bg-slate-100 px-5 py-2.5 text-[13px] font-medium text-slate-600 transition-all duration-200 hover:bg-violet-100 hover:text-violet-600"
+            className="group inline-flex items-center gap-2 rounded-full bg-slate-100 px-5 py-2.5 text-[13px] font-medium text-slate-600 transition-all duration-200 hover:bg-blue-100 hover:text-blue-600"
           >
             {t.projects.viewAll}
             <svg

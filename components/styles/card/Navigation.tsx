@@ -36,7 +36,7 @@ export function Navigation() {
       >
         <Link
           href="/"
-          className="px-4 py-2 text-[13px] font-semibold text-slate-800 transition-colors duration-200 hover:text-violet-600"
+          className="px-4 py-2 text-[13px] font-semibold text-slate-800 transition-colors duration-200 hover:text-blue-600"
         >
           {siteConfig.name}
         </Link>
@@ -47,7 +47,7 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="group relative rounded-full px-4 py-2 text-[13px] font-medium text-slate-500 transition-all duration-200 hover:bg-violet-50 hover:text-violet-600"
+                className="nav-underline group relative rounded-full px-4 py-2 text-[13px] font-medium text-slate-500 transition-all duration-200 hover:bg-blue-50 hover:text-blue-600"
               >
                 {link.label}
               </Link>
@@ -55,7 +55,7 @@ export function Navigation() {
               <a
                 key={link.href}
                 href={link.href}
-                className="group relative rounded-full px-4 py-2 text-[13px] font-medium text-slate-500 transition-all duration-200 hover:bg-violet-50 hover:text-violet-600"
+                className="nav-underline group relative rounded-full px-4 py-2 text-[13px] font-medium text-slate-500 transition-all duration-200 hover:bg-blue-50 hover:text-blue-600"
               >
                 {link.label}
               </a>
@@ -94,7 +94,7 @@ export function Navigation() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-xl px-4 py-2.5 text-[14px] font-medium text-slate-600 transition-colors duration-200 hover:bg-violet-50 hover:text-violet-600"
+                  className="rounded-xl px-4 py-2.5 text-[14px] font-medium text-slate-600 transition-colors duration-200 hover:bg-blue-50 hover:text-blue-600"
                 >
                   {link.label}
                 </Link>
@@ -103,7 +103,7 @@ export function Navigation() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-xl px-4 py-2.5 text-[14px] font-medium text-slate-600 transition-colors duration-200 hover:bg-violet-50 hover:text-violet-600"
+                  className="rounded-xl px-4 py-2.5 text-[14px] font-medium text-slate-600 transition-colors duration-200 hover:bg-blue-50 hover:text-blue-600"
                 >
                   {link.label}
                 </a>

@@ -65,6 +65,14 @@
 - [x] Create `app/projects/page.tsx` (projects page)
 - [x] Wire up navigation links between pages
 
+## Fix: Blog Not Displaying
+- [x] Diagnose root cause: RSS feed blocked by Vercel WAF/Cloudflare challenge
+- [x] Update `lib/blog.ts`: always enable cache, fallback to local markdown on fetch failure
+- [x] Add `User-Agent` header to RSS fetch request
+- [x] Create `scripts/import-rss.ts` for local RSS import (URL or file)
+- [ ] Import actual blog posts from `https://blog.ekreke.cn/rss.xml`
+- [ ] Verify blog section displays on homepage and `/blog` page
+
 ## Phase 9: Polish & Deploy
 - [ ] Dark mode support across all styles
 - [ ] Responsive design for all styles

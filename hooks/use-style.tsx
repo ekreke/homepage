@@ -3,6 +3,7 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import { StyleName, defaultStyle, supportedStyles } from "@/lib/style-registry";
 import "@/components/styles/minimal";
+import "@/components/styles/card";
 import "@/components/styles/magazine";
 
 const validStyles: readonly string[] = supportedStyles;

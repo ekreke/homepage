@@ -17,7 +17,7 @@ export interface Post {
 const CONTENT_DIR = path.join(process.cwd(), "content", "blog");
 const INDEX_JSON_PATH = path.join(CONTENT_DIR, "index.json");
 const CACHE_TTL = 3600 * 1000;
-const CACHE_ENABLED = process.env.NODE_ENV === "production" || process.env.BLOG_CACHE === "true";
+const CACHE_ENABLED = true;
 
 function slugify(title: string): string {
   return title
@@ -72,7 +72,12 @@ async function fetchRSSFeed(): Promise<Post[]> {
   const rssSource = blogSources.find((s) => s.type === "rss");
   if (!rssSource?.endpoint) return [];
 
-  const res = await fetch(rssSource.endpoint, { next: { revalidate: 3600 } });
+  const res = await fetch(rssSource.endpoint, {
+    next: { revalidate: 3600 },
+    headers: {
+      "User-Agent": "Mozilla/5.0 (compatible; BlogBot/1.0)",
+    },
+  });
   if (!res.ok) throw new Error(`RSS fetch failed: ${res.status}`);
 
   const xml = await res.text();
@@ -181,12 +186,57 @@ function readCachedPost(slug: string): Post | null {
   }
 }
 
+function readCachedIndexIgnoreTTL(): Post[] | null {
+  try {
+    if (!fs.existsSync(INDEX_JSON_PATH)) return null;
+    const raw = fs.readFileSync(INDEX_JSON_PATH, "utf-8");
+    const parsed = JSON.parse(raw);
+    const posts = Array.isArray(parsed) ? parsed : parsed.posts;
+    if (!Array.isArray(posts) || posts.length === 0) return null;
+    return posts as Post[];
+  } catch {
+    return null;
+  }
+}
+
+function readLocalMarkdownPosts(): Post[] {
+  try {
+    if (!fs.existsSync(CONTENT_DIR)) return [];
+    const files = fs.readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".md"));
+    const posts: Post[] = [];
+    for (const file of files) {
+      const raw = fs.readFileSync(path.join(CONTENT_DIR, file), "utf-8");
+      const { data, body } = parseFrontmatter(raw);
+      const slug = String(data.slug ?? file.replace(/\.md$/, ""));
+      posts.push({
+        title: String(data.title ?? ""),
+        slug,
+        date: String(data.date ?? ""),
+        excerpt: String(data.excerpt ?? ""),
+        content: body,
+        tags: Array.isArray(data.tags) ? (data.tags as string[]) : [],
+        coverImage: String(data.coverImage ?? ""),
+        originalUrl: String(data.originalUrl ?? ""),
+      });
+    }
+    return posts.sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+  } catch {
+    return [];
+  }
+}
+
 export async function fetchAndCachePosts(): Promise<Post[]> {
   try {
     const posts = await fetchRSSFeed();
     writeCache(posts);
     return posts;
   } catch {
+    const cached = readCachedIndexIgnoreTTL();
+    if (cached) return cached;
+    const local = readLocalMarkdownPosts();
+    if (local.length > 0) return local;
     return [];
   }
 }
@@ -205,7 +255,11 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   if (cached) return cached;
 
   const posts = await fetchAndCachePosts();
-  return posts.find((p) => p.slug === slug) ?? null;
+  const found = posts.find((p) => p.slug === slug);
+  if (found) return found;
+
+  const local = readLocalMarkdownPosts();
+  return local.find((p) => p.slug === slug) ?? null;
 }
 
 export async function getAllSlugs(): Promise<string[]> {

@@ -97,7 +97,7 @@ export function AboutSection() {
             transition: "all 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
         >
-          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-violet-500">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-500">
             About
           </span>
           <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
@@ -107,7 +107,7 @@ export function AboutSection() {
 
         <div className="grid gap-5 lg:grid-cols-5">
           <TiltCard
-            className="lg:col-span-3 rounded-3xl bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_40px_rgb(139,92,246,0.12)] hover:border-violet-200 border border-transparent"
+            className="lg:col-span-3 rounded-3xl bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_40px_rgb(59,130,246,0.12)] hover:border-blue-200 border border-transparent"
             delay={0}
             inView={inView}
           >
@@ -125,11 +125,11 @@ export function AboutSection() {
             {skills.map((skill, i) => (
               <TiltCard
                 key={skill.name}
-                className="rounded-3xl bg-white p-5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_40px_rgb(139,92,246,0.12)] hover:border-violet-200 border border-transparent flex flex-col items-center justify-center text-center"
+                className="rounded-3xl bg-white p-5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_40px_rgb(59,130,246,0.12)] hover:border-blue-200 border border-transparent flex flex-col items-center justify-center text-center"
                 delay={0.1 + i * 0.08}
                 inView={inView}
               >
-                <div className={`flex h-12 w-12 items-center justify-center rounded-2xl ${skill.color.split(" ")[0]} text-2xl`}>
+                <div className={`icon-spin-hover flex h-12 w-12 items-center justify-center rounded-2xl ${skill.color.split(" ")[0]} text-2xl`}>
                   {skill.icon}
                 </div>
                 <span className="mt-3 text-[13px] font-semibold text-slate-700">

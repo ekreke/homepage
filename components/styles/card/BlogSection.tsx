@@ -106,7 +106,7 @@ export function BlogSection() {
             transition: "all 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
         >
-          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-violet-500">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-500">
             Writing
           </span>
           <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
@@ -122,20 +122,20 @@ export function BlogSection() {
               className="block"
             >
               <TiltCard
-                className="rounded-3xl bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_40px_rgb(139,92,246,0.12)] hover:border-violet-200 border border-transparent overflow-hidden"
+                className="card-shimmer-border rounded-3xl bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_40px_rgb(59,130,246,0.12)] hover:border-blue-200 border border-transparent overflow-hidden"
                 delay={0.1 + i * 0.1}
                 inView={inView}
               >
-                <div className="relative aspect-[16/10] overflow-hidden">
+                <div className="group relative aspect-[16/10] overflow-hidden">
                   {post.coverImage ? (
                     <img
                       src={post.coverImage}
                       alt={post.title}
-                      className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   ) : (
-                    <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-violet-100 to-fuchsia-100">
-                      <span className="text-5xl font-bold text-violet-300">
+                    <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-blue-100 to-cyan-100">
+                      <span className="text-5xl font-bold text-blue-300">
                         {post.title.charAt(0)}
                       </span>
                     </div>
@@ -162,7 +162,7 @@ export function BlogSection() {
                     {post.excerpt}
                   </p>
 
-                  <div className="mt-4 flex items-center gap-1.5 text-[12px] font-medium text-violet-500"
+                  <div className="mt-4 flex items-center gap-1.5 text-[12px] font-medium text-blue-500"
                   >
                     <span>{t.blog.readMore}</span>
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -186,7 +186,7 @@ export function BlogSection() {
             href={siteConfig.links.blog}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 rounded-full bg-slate-100 px-5 py-2.5 text-[13px] font-medium text-slate-600 transition-all duration-200 hover:bg-violet-100 hover:text-violet-600"
+            className="group inline-flex items-center gap-2 rounded-full bg-slate-100 px-5 py-2.5 text-[13px] font-medium text-slate-600 transition-all duration-200 hover:bg-blue-100 hover:text-blue-600"
           >
             {t.blog.readAll}
             <svg

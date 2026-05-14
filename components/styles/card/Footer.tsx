@@ -78,7 +78,7 @@ export function Footer() {
                   href={siteConfig.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex h-10 w-10 items-center justify-center rounded-xl bg-slate-800 text-slate-400 transition-all duration-200 hover:bg-violet-600 hover:text-white"
+                  className="icon-spin-hover group flex h-10 w-10 items-center justify-center rounded-xl bg-slate-800 text-slate-400 transition-all duration-200 hover:bg-blue-600 hover:text-white"
                   aria-label="GitHub"
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -91,7 +91,7 @@ export function Footer() {
                   href={siteConfig.links.blog}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex h-10 w-10 items-center justify-center rounded-xl bg-slate-800 text-slate-400 transition-all duration-200 hover:bg-violet-600 hover:text-white"
+                  className="icon-spin-hover group flex h-10 w-10 items-center justify-center rounded-xl bg-slate-800 text-slate-400 transition-all duration-200 hover:bg-blue-600 hover:text-white"
                   aria-label="Blog"
                 >
                   <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -104,7 +104,7 @@ export function Footer() {
                   href={siteConfig.links.bento}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex h-10 w-10 items-center justify-center rounded-xl bg-slate-800 text-slate-400 transition-all duration-200 hover:bg-violet-600 hover:text-white"
+                  className="icon-spin-hover group flex h-10 w-10 items-center justify-center rounded-xl bg-slate-800 text-slate-400 transition-all duration-200 hover:bg-blue-600 hover:text-white"
                   aria-label="Bento"
                 >
                   <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -126,14 +126,14 @@ export function Footer() {
           </p>
           <p className="text-[11px] text-slate-600"
           >
-            {t.footer.madeWith} <span className="text-violet-500">♥</span> {t.footer.and} Next.js
+            {t.footer.madeWith} <span className="text-blue-500">♥</span> {t.footer.and} Next.js
           </p>
         </div>
       </div>
 
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-slate-700 shadow-lg shadow-black/10 transition-all duration-300 hover:shadow-xl hover:scale-105 ${
+        className={`icon-spin-hover fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-slate-700 shadow-lg shadow-black/10 transition-all duration-300 hover:shadow-xl hover:scale-105 ${
           showTop
             ? "translate-y-0 opacity-100"
             : "translate-y-4 opacity-0 pointer-events-none"

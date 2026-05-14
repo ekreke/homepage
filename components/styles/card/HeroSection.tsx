@@ -98,7 +98,7 @@ export function HeroSection() {
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div
-          className="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-violet-200/30 blur-3xl card-float"
+          className="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-blue-200/30 blur-3xl card-float"
           style={{ animationDelay: "0s" }}
         />
         <div
@@ -114,7 +114,7 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto w-full max-w-5xl">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <TiltCard
-            className="col-span-full sm:col-span-1 lg:col-span-1 row-span-2 rounded-3xl bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_40px_rgb(139,92,246,0.12)] hover:border-violet-200 border border-transparent"
+            className="col-span-full sm:col-span-1 lg:col-span-1 row-span-2 rounded-3xl bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_40px_rgb(59,130,246,0.12)] hover:border-blue-200 border border-transparent"
             delay={0}
             inView={inView}
           >
@@ -124,6 +124,7 @@ export function HeroSection() {
                   src={siteConfig.avatar}
                   alt={siteConfig.name}
                   className="h-28 w-28 rounded-3xl object-cover shadow-lg"
+                  style={{ animation: "floatY 3s ease-in-out infinite" }}
                 />
                 <div className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 border-2 border-white shadow-sm">
                   <div className="h-2 w-2 rounded-full bg-white" />
@@ -136,7 +137,7 @@ export function HeroSection() {
                   href={siteConfig.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-600 transition-all duration-200 hover:bg-violet-100 hover:text-violet-600"
+                  className="icon-spin-hover flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-600 transition-all duration-200 hover:bg-blue-100 hover:text-blue-600"
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21.5c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" />
@@ -146,7 +147,7 @@ export function HeroSection() {
                   href={siteConfig.links.bento}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-600 transition-all duration-200 hover:bg-violet-100 hover:text-violet-600"
+                  className="icon-spin-hover flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-600 transition-all duration-200 hover:bg-blue-100 hover:text-blue-600"
                 >
                   <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <rect x="2" y="2" width="6" height="6" rx="1" />
@@ -160,12 +161,12 @@ export function HeroSection() {
           </TiltCard>
 
           <TiltCard
-            className="col-span-full sm:col-span-1 rounded-3xl bg-white p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_40px_rgb(139,92,246,0.12)] hover:border-violet-200 border border-transparent"
+            className="col-span-full sm:col-span-1 rounded-3xl bg-white p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_40px_rgb(59,130,246,0.12)] hover:border-blue-200 border border-transparent"
             delay={0.1}
             inView={inView}
           >
             <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-100 text-violet-600">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-blue-600">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                 </svg>
@@ -178,7 +179,7 @@ export function HeroSection() {
           </TiltCard>
 
           <TiltCard
-            className="col-span-full sm:col-span-1 rounded-3xl bg-white p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_40px_rgb(139,92,246,0.12)] hover:border-violet-200 border border-transparent"
+            className="col-span-full sm:col-span-1 rounded-3xl bg-white p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_40px_rgb(59,130,246,0.12)] hover:border-blue-200 border border-transparent"
             delay={0.15}
             inView={inView}
           >
@@ -196,7 +197,7 @@ export function HeroSection() {
           </TiltCard>
 
           <TiltCard
-            className="col-span-full sm:col-span-2 lg:col-span-2 rounded-3xl bg-gradient-to-br from-violet-600 to-fuchsia-600 p-8 shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:shadow-[0_8px_50px_rgb(139,92,246,0.25)]"
+            className="col-span-full sm:col-span-2 lg:col-span-2 rounded-3xl bg-gradient-to-br from-blue-600 to-cyan-600 p-8 shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:shadow-[0_8px_50px_rgb(59,130,246,0.25)]"
             delay={0.2}
             inView={inView}
           >
@@ -211,7 +212,7 @@ export function HeroSection() {
                 href={siteConfig.cta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 self-start rounded-xl bg-white px-5 py-2.5 text-sm font-semibold text-violet-600 transition-all duration-200 hover:shadow-lg hover:scale-105"
+                className="btn-glow-pulse mt-6 inline-flex items-center gap-2 self-start rounded-xl bg-white px-5 py-2.5 text-sm font-semibold text-blue-600 transition-all duration-200 hover:shadow-lg hover:scale-105"
               >
                 Get in Touch
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2">

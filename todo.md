@@ -95,3 +95,12 @@
 - [ ] Add Chat link to all 3 style Navigation components
 - [ ] Add chat message persistence (localStorage)
 - [ ] Ensure chat UI adapts to current style (minimal/card/magazine)
+
+## Phase 11: i18n Content Migration & Multilingual Generation
+- [ ] Migrate `config/site.ts` personal content (bio, story, tagline, cta.label) to `i18n/<lang>.json` under new `site` key
+- [ ] Add `site` and `projects` sections to all 4 i18n JSON files (en, zh, zh-TW, de)
+- [ ] Update all components to read personal content from i18n instead of siteConfig
+- [ ] Migrate `config/projects.ts` titles/descriptions to i18n (keep tags/urls/images in projects.ts)
+- [ ] Create i18n content generation skill (`.opencode/skills/i18n-content-gen/`)
+- [ ] Generate quality translations for all languages using the skill
+- [ ] Verify all languages render correctly on homepage, about, projects pages

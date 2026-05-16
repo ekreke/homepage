@@ -42,6 +42,11 @@
 ## Workflow
 
 - **Before every `git commit`**, launch a subagent (Task tool, `explore` type) to review the full `git diff`. Address any issues found before committing.
+- **After completing each feature or task**, update `todo.md` to reflect the change:
+  - Mark completed items as `[x]`
+  - Add new items if the feature introduced new tasks
+  - Add a new phase section if the feature is a new initiative
+  - This ensures every completed feature leaves a trace in `todo.md`
 
 ## Code Rules
 

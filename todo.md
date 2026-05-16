@@ -81,6 +81,10 @@
 - [ ] Performance audit (Lighthouse)
 
 ## Phase 10: Personal AI Agent
+- [ ] Create `app/chatgpt/page.tsx` — ChatGPT 类似主题页面设计
+- [ ] Create `app/anthropic/page.tsx` — Anthropic 类似主题页面设计
+
+## Phase 11: Additional Themes
 - [ ] Create `config/ai-agent.ts` (system prompt, suggested questions, knowledge config)
 - [ ] Create `lib/chat.ts` (AI interface abstraction, mock mode)
 - [ ] Create `components/chat/ChatMessage.tsx` (message bubble component)

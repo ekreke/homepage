@@ -19,6 +19,16 @@
     "bio": "Backend Engineer mit Fokus auf zuverlässige Services, datenintensive Systeme und Entwicklerwerkzeuge. Ich entwickle Produktionssysteme mit Go, PostgreSQL, Redis, ClickHouse, Kafka und Container-Plattformen.",
     "story": "Ich überführe komplexe Infrastruktur- und Datenabläufe in zuverlässige, gut beobachtbare Produkte. Meine Arbeit umfasst API-Design, asynchrone Workflows, Speichersysteme und Werkzeuge, die Entwicklerteams produktiver machen."
   },
+  "darkSystems": {
+    "brandSuffix": "SYSTEME",
+    "eyebrow": "Backend-Systeme / Open Source",
+    "titleFirst": "Zuverlässig",
+    "titleSecond": "gestaltet.",
+    "currentSignal": "Aktueller Fokus",
+    "systemFocus": "Systeme, die standhalten.",
+    "openSourceWork": "Open-Source-Arbeit",
+    "writing": "Artikel"
+  },
   "blog": {
     "title": "Neueste Artikel",
     "readAll": "Alle Artikel lesen",

@@ -109,3 +109,4 @@
 - [x] Replace template identity and fictional portfolio cards with verified personal open-source work
 - [x] Update all supported-language hero, project, footer, and chat copy for a backend engineering profile
 - [x] Keep generated blog cache out of the Git worktree
+- [x] Implement the selected Dark Systems visual direction as the homepage entry point

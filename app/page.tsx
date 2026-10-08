@@ -1,13 +1,12 @@
 "use client";
 
-import { useStyle } from "@/hooks/use-style";
-import { getStyleComponents, defaultStyle } from "@/lib/style-registry";
+import { getStyleComponents } from "@/lib/style-registry";
 import { useLanguage } from "@/components/shared/LanguageProvider";
+import "@/components/styles/dark-systems";
 
 export default function Home() {
-  const { style } = useStyle();
   const { t } = useLanguage();
-  const components = getStyleComponents(style) ?? getStyleComponents(defaultStyle);
+  const components = getStyleComponents("dark-systems");
 
   if (!components) {
     return (
@@ -27,7 +26,7 @@ export default function Home() {
   } = components;
 
   return (
-    <>
+    <div className="min-h-screen bg-[#08090c] text-[#f2f4f7]">
       <Navigation />
       <main>
         <HeroSection />
@@ -36,6 +35,6 @@ export default function Home() {
         <BlogSection />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

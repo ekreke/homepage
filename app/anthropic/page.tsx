@@ -50,7 +50,7 @@ export default function AnthropicPage() {
       lower.includes("stack") ||
       lower.includes("技术")
     ) {
-      return `My core skills include ${siteConfig.skills.join(", ")}. I focus on building beautiful and functional digital experiences.`;
+      return `My core skills include ${siteConfig.skills.join(", ")}. I focus on reliable backend services, data-intensive systems, and developer tooling.`;
     }
     if (
       lower.includes("contact") ||

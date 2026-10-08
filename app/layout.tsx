@@ -4,8 +4,9 @@ import { LanguageProvider } from "@/components/shared/LanguageProvider";
 import { StyleProvider } from "@/hooks/use-style";
 
 export const metadata: Metadata = {
-  title: "Personal Homepage",
-  description: "Personal homepage with switchable styles",
+  title: "Ekreke — Backend Engineer",
+  description:
+    "Backend engineer specializing in Go, data-intensive systems, and developer tooling.",
 };
 
 export default function RootLayout({

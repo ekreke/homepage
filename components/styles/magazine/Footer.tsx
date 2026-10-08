@@ -39,7 +39,7 @@ export function Footer() {
               {siteConfig.name}
             </h3>
             <p className="mt-4 max-w-sm font-serif text-base italic leading-relaxed text-white/40">
-              {siteConfig.bio}
+              {t.site.bio}
             </p>
           </div>
 
@@ -52,7 +52,7 @@ export function Footer() {
                 { label: "About", href: "#about" },
                 { label: "Projects", href: "#projects" },
                 { label: "Blog", href: "/blog" },
-                { label: "Chat", href: "/chat" },
+                { label: "Chat", href: "/chatgpt" },
               ].map((link) => (
                 <a
                   key={link.href}

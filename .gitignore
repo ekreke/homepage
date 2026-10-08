@@ -4,6 +4,8 @@
 # Build output
 /dist
 /.next/
+/content/blog/*
+!/content/blog/.gitkeep
 
 # Next.js
 next-env.d.ts

@@ -22,7 +22,7 @@ export function Navigation() {
     { label: t.nav.about, href: "#about" },
     { label: t.nav.projects, href: "#projects" },
     { label: t.nav.blog, href: "/blog" },
-    { label: t.nav.chat, href: "/chat" },
+    { label: t.nav.chat, href: "/chatgpt" },
   ];
 
   return (

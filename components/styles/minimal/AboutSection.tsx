@@ -62,7 +62,7 @@ export function AboutSection() {
                   transition: "all 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s",
                 }}
               >
-                {siteConfig.bio}
+                {t.site.bio}
               </p>
 
               <p
@@ -73,7 +73,7 @@ export function AboutSection() {
                   transition: "all 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s",
                 }}
               >
-                {siteConfig.story}
+                {t.site.story}
               </p>
 
               <div

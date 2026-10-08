@@ -28,7 +28,7 @@ export function Footer() {
             </h3>
             <p className="mt-3 max-w-sm text-[14px] leading-relaxed text-slate-400"
             >
-              {siteConfig.bio}
+              {t.site.bio}
             </p>
           </div>
 
@@ -42,7 +42,7 @@ export function Footer() {
                 { label: "About", href: "#about" },
                 { label: "Projects", href: "#projects" },
                 { label: "Blog", href: "/blog" },
-                { label: "Chat", href: "/chat" },
+                { label: "Chat", href: "/chatgpt" },
               ].map((link) => (
                 <a
                   key={link.href}

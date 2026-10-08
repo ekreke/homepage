@@ -6,13 +6,18 @@
     "chat": "聊天"
   },
   "hero": {
-    "tagline": "UI/UX 设计师与开发者",
-    "cta": "联系我"
+    "tagline": "后端工程师 · Go · 分布式系统",
+    "description": "面向开发者团队的开源作品与后端系统。",
+    "cta": "访问 GitHub"
   },
   "about": {
     "title": "关于我",
     "skills": "核心技能",
     "story": "我的故事"
+  },
+  "site": {
+    "bio": "专注于可靠服务、数据密集型系统和开发者工具的后端工程师。我主要使用 Go，围绕 PostgreSQL、Redis、ClickHouse、Kafka 和容器平台构建生产系统。",
+    "story": "我喜欢把复杂的基础设施和数据工作流转化为可靠、可观测的产品。工作范围包括 API 设计、异步工作流、存储系统，以及帮助开发团队提效的工具。"
   },
   "blog": {
     "title": "最新文章",
@@ -21,19 +26,19 @@
     "backToList": "返回博客列表"
   },
   "projects": {
-    "title": "精选项目",
+    "title": "精选开源作品",
     "viewProject": "查看项目",
     "viewAll": "查看所有项目"
   },
   "footer": {
-    "copyright": "© 2025 John Paul. 保留所有权利。",
+    "copyright": "© 2026 Ekreke. 保留所有权利。",
     "madeWith": "使用",
     "and": "和"
   },
   "chat": {
     "title": "与 AI 聊天",
     "placeholder": "问我任何问题...",
-    "welcome": "你好！我是 John Paul 的 AI 助手。可以问我关于他的工作、技能或项目的任何问题。",
+    "welcome": "你好！我是 Ekreke 的 AI 助手。可以问我关于后端工作、开源项目或技术栈的问题。",
     "send": "发送",
     "thinking": "思考中..."
   },

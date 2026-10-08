@@ -9,24 +9,27 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "EcoShop - Sustainable E-commerce",
+    title: "TokCat",
     description:
-      "A complete e-commerce platform focused on sustainable products with advanced filtering and recommendation systems.",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    image: "https://images.unsplash.com/photo-1658297063569-162817482fb6?w=800",
+      "A desktop companion for AI coding agents that visualizes local token-consumption rates, offers agent chat through ACP, and supports multiple local data sources without uploading usage data.",
+    tags: ["Swift", "SwiftUI", "ACP", "Windows"],
+    image: "/images/projects/tokcat.svg",
+    githubUrl: "https://github.com/ekreke/TokCat",
   },
   {
-    title: "HealthTracker Mobile App",
+    title: "gobase",
     description:
-      "Cross-platform mobile app for tracking health metrics with AI-powered insights and personalized recommendations.",
-    tags: ["React Native", "Firebase", "AI/ML", "HealthKit"],
-    image: "https://images.unsplash.com/photo-1597740985671-2a8a3b80502e?w=800",
+      "A reusable Go utility library with focused packages for collections, strings, maps, formatting, and operating-system helpers.",
+    tags: ["Go", "Libraries", "Testing"],
+    image: "/images/projects/gobase.svg",
+    githubUrl: "https://github.com/ekreke/gobase",
   },
   {
-    title: "Analytics Dashboard Pro",
+    title: "pi-extensions",
     description:
-      "Modern analytics dashboard with real-time data visualization and customizable widgets for business intelligence.",
-    tags: ["Vue.js", "D3.js", "WebSocket", "MongoDB"],
-    image: "https://images.unsplash.com/photo-1554098415-788601c80aef?w=800",
+      "Personal extensions for the Pi coding agent, packaged for direct installation and focused on making day-to-day agent workflows more pleasant.",
+    tags: ["TypeScript", "AI Agents", "Developer Experience"],
+    image: "/images/projects/pi-extensions.svg",
+    githubUrl: "https://github.com/ekreke/pi-extensions",
   },
 ];

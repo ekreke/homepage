@@ -105,7 +105,10 @@ function ProjectCard({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <article
+    <a
+      href={project.githubUrl ?? project.liveUrl ?? "/projects"}
+      target={project.githubUrl || project.liveUrl ? "_blank" : undefined}
+      rel={project.githubUrl || project.liveUrl ? "noopener noreferrer" : undefined}
       className="group cursor-pointer overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 hover:border-slate-300 hover:shadow-lg hover:shadow-slate-200/50"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -175,6 +178,6 @@ function ProjectCard({
           </svg>
         </div>
       </div>
-    </article>
+    </a>
   );
 }

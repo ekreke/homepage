@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/components/shared/LanguageProvider";
 import { siteConfig } from "@/config/site";
+import { projects } from "@/config/projects";
 
 function useCountUp(end: number, duration = 1500, start = false) {
   const [count, setCount] = useState(0);
@@ -205,7 +206,7 @@ export function HeroSection() {
               <div>
                 <h2 className="text-2xl font-bold text-white">{t.hero.cta}</h2>
                 <p className="mt-2 text-sm text-white/70 max-w-xs">
-                  I&apos;m always open to discussing new projects, creative ideas or opportunities.
+                  {t.hero.description}
                 </p>
               </div>
               <a
@@ -214,7 +215,7 @@ export function HeroSection() {
                 rel="noopener noreferrer"
                 className="btn-glow-pulse mt-6 inline-flex items-center gap-2 self-start rounded-xl bg-white px-5 py-2.5 text-sm font-semibold text-blue-600 transition-all duration-200 hover:shadow-lg hover:scale-105"
               >
-                Get in Touch
+                {t.hero.cta}
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M2 7h10M8 3l4 4-4 4" />
                 </svg>
@@ -226,9 +227,3 @@ export function HeroSection() {
     </section>
   );
 }
-
-const projects = [
-  { title: "EcoShop", description: "Sustainable e-commerce" },
-  { title: "HealthTracker", description: "Health metrics app" },
-  { title: "Analytics Pro", description: "Business dashboard" },
-];

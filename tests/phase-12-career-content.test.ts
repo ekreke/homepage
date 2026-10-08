@@ -14,11 +14,15 @@ function assert(condition: unknown, message: string): asserts condition {
 const site = read("config/site.ts");
 const projects = read("config/projects.ts");
 const layout = read("app/layout.tsx");
+const homepage = read("app/page.tsx");
+const darkSystems = read("components/styles/dark-systems/index.ts");
 
 assert(site.includes('name: "Ekreke"'), "site identity must use Ekreke");
 assert(site.includes("PostgreSQL") && site.includes("ClickHouse"), "site skills must include backend data systems");
 assert(site.includes("https://github.com/ekreke"), "site CTA must lead to the GitHub profile");
 assert(layout.includes("Ekreke — Backend Engineer"), "metadata must describe the career landing page");
+assert(homepage.includes('getStyleComponents("dark-systems")'), "homepage must use the selected Dark Systems direction");
+assert(darkSystems.includes('registerStyle("dark-systems"'), "Dark Systems must be registered as a complete style");
 
 for (const navigation of [
   "components/styles/minimal/Navigation.tsx",
@@ -43,6 +47,7 @@ for (const locale of ["en", "zh", "zh-TW", "de"]) {
   assert(translations.includes('"description"'), `${locale} must include the hero description`);
   assert(translations.includes('"site"'), `${locale} must include localized career content`);
   assert(translations.includes("Ekreke"), `${locale} must use the current site identity`);
+  assert(translations.includes('"darkSystems"'), `${locale} must include Dark Systems copy`);
 }
 
 for (const projectSection of [

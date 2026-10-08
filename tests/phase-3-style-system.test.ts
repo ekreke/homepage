@@ -24,7 +24,8 @@ check("exports getStyleComponents function", registry.includes("getStyleComponen
 check("includes 'minimal'", registry.includes('"minimal"'));
 check("includes 'card'", registry.includes('"card"'));
 check("includes 'magazine'", registry.includes('"magazine"'));
-check("defaultStyle is 'minimal'", registry.includes('"minimal"'));
+check("includes 'dark-systems'", registry.includes('"dark-systems"'));
+check("defaultStyle is 'dark-systems'", registry.includes('defaultStyle: StyleName = "dark-systems"'));
 
 console.log("\n-- StyleComponents interface --");
 check("defines Navigation", registry.includes("Navigation: ComponentType"));

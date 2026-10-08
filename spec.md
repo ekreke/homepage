@@ -7,14 +7,14 @@
 - Deployment: Vercel
 
 ## 2. Style System
-- Three styles: Minimal / Card / Magazine
+- Four styles: Minimal / Card / Magazine / Dark Systems
 - Each style is a COMPLETELY INDEPENDENT layout, sharing only data and i18n
 - Styles are stored under `components/styles/<style-name>/`
 - Each style folder exports the same set of section components:
   - HeroSection, AboutSection, BlogSection, ProjectsSection, Footer
 - Style registry in `lib/style-registry.ts` maps style name → component set
-- User's choice is persisted in localStorage, default is "minimal"
-- Style switcher is a shared component rendered in every style's Navigation
+- User's choice is persisted in localStorage; the homepage uses the selected Dark Systems direction
+- The style switcher remains available for existing style previews; the selected Dark Systems homepage does not expose style switching
 
 ## 3. Blog System
 - Each blog post is SSG-generated as an independent HTML page

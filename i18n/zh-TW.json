@@ -19,6 +19,16 @@
     "bio": "專注於可靠服務、資料密集型系統和開發者工具的後端工程師。我主要使用 Go，圍繞 PostgreSQL、Redis、ClickHouse、Kafka 和容器平台建構生產系統。",
     "story": "我喜歡把複雜的基礎設施和資料工作流程轉化為可靠、可觀測的產品。工作範圍包括 API 設計、非同步工作流程、儲存系統，以及幫助開發團隊提效的工具。"
   },
+  "darkSystems": {
+    "brandSuffix": "系統",
+    "eyebrow": "後端系統 / 開源",
+    "titleFirst": "可靠，",
+    "titleSecond": "源自設計。",
+    "currentSignal": "目前關注",
+    "systemFocus": "經得起考驗的系統。",
+    "openSourceWork": "開源作品",
+    "writing": "寫作"
+  },
   "blog": {
     "title": "最新文章",
     "readAll": "閱讀所有文章",

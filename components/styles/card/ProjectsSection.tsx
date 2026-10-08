@@ -104,7 +104,13 @@ export function ProjectsSection() {
               delay={0.1 + i * 0.1}
               inView={inView}
             >
-              <div className={`group relative overflow-hidden ${i === 0 ? "aspect-[2/1]" : "aspect-[4/3]"}`}>
+              <a
+                href={project.githubUrl ?? project.liveUrl ?? "/projects"}
+                target={project.githubUrl || project.liveUrl ? "_blank" : undefined}
+                rel={project.githubUrl || project.liveUrl ? "noopener noreferrer" : undefined}
+                className="group block h-full"
+              >
+              <div className={`relative overflow-hidden ${i === 0 ? "aspect-[2/1]" : "aspect-[4/3]"}`}>
                 <img
                   src={project.image}
                   alt={project.title}
@@ -140,6 +146,7 @@ export function ProjectsSection() {
                   </svg>
                 </div>
               </div>
+              </a>
             </TiltCard>
           ))}
         </div>

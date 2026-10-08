@@ -104,3 +104,8 @@
 - [ ] Create i18n content generation skill (`.opencode/skills/i18n-content-gen/`)
 - [ ] Generate quality translations for all languages using the skill
 - [ ] Verify all languages render correctly on homepage, about, projects pages
+
+## Phase 12: Career Landing Content
+- [x] Replace template identity and fictional portfolio cards with verified personal open-source work
+- [x] Update all supported-language hero, project, footer, and chat copy for a backend engineering profile
+- [x] Keep generated blog cache out of the Git worktree

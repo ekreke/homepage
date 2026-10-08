@@ -113,10 +113,10 @@ export function AboutSection() {
           >
             <div className="space-y-4">
               <p className="text-base leading-[1.8] text-slate-600">
-                {siteConfig.bio}
+                {t.site.bio}
               </p>
               <p className="text-base leading-[1.8] text-slate-500">
-                {siteConfig.story}
+                {t.site.story}
               </p>
             </div>
           </TiltCard>

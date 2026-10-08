@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">gobase</title>
+  <desc id="desc">Reusable utilities for Go projects</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c4a6e"/><stop offset="1" stop-color="#0369a1"/></linearGradient></defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <path d="M0 598 220 466l155 95 181-188 193 119 159-211 192 116v353H0Z" fill="#082f49" opacity=".68"/>
+  <text x="100" y="150" fill="#bae6fd" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="5">GO UTILITY LIBRARY</text>
+  <text x="100" y="326" fill="white" font-family="Arial, sans-serif" font-size="116" font-weight="700">gobase</text>
+  <text x="106" y="383" fill="#bae6fd" font-family="Arial, sans-serif" font-size="31">Small, focused building blocks for Go</text>
+  <g fill="none" stroke="#7dd3fc" stroke-width="8" opacity=".9"><rect x="102" y="487" width="202" height="91" rx="18"/><rect x="330" y="487" width="202" height="91" rx="18"/><rect x="558" y="487" width="202" height="91" rx="18"/></g>
+  <g fill="#e0f2fe" font-family="Arial, sans-serif" font-size="24" font-weight="700"><text x="144" y="542">COLLECTIONS</text><text x="373" y="542">STRINGS</text><text x="617" y="542">MAPS</text></g>
+  <circle cx="992" cy="337" r="150" fill="#e0f2fe" opacity=".11"/><path d="M884 412c43-121 194-121 236 0" fill="none" stroke="#e0f2fe" stroke-linecap="round" stroke-width="26"/><circle cx="927" cy="335" r="19" fill="#e0f2fe"/><circle cx="1078" cy="335" r="19" fill="#e0f2fe"/>
+</svg>

@@ -6,13 +6,18 @@
     "chat": "Chat"
   },
   "hero": {
-    "tagline": "UI/UX Designer & Entwickler",
-    "cta": "Kontakt aufnehmen"
+    "tagline": "Backend Engineer · Go · Verteilte Systeme",
+    "description": "Open-Source-Arbeit und Backendsysteme für Entwicklungsteams.",
+    "cta": "GitHub ansehen"
   },
   "about": {
     "title": "Über mich",
     "skills": "Kernkompetenzen",
     "story": "Meine Geschichte"
+  },
+  "site": {
+    "bio": "Backend Engineer mit Fokus auf zuverlässige Services, datenintensive Systeme und Entwicklerwerkzeuge. Ich entwickle Produktionssysteme mit Go, PostgreSQL, Redis, ClickHouse, Kafka und Container-Plattformen.",
+    "story": "Ich überführe komplexe Infrastruktur- und Datenabläufe in zuverlässige, gut beobachtbare Produkte. Meine Arbeit umfasst API-Design, asynchrone Workflows, Speichersysteme und Werkzeuge, die Entwicklerteams produktiver machen."
   },
   "blog": {
     "title": "Neueste Artikel",
@@ -21,19 +26,19 @@
     "backToList": "Zurück zum Blog"
   },
   "projects": {
-    "title": "Ausgewählte Projekte",
+    "title": "Ausgewählte Open-Source-Arbeit",
     "viewProject": "Projekt ansehen",
     "viewAll": "Alle Projekte ansehen"
   },
   "footer": {
-    "copyright": "© 2025 John Paul. Alle Rechte vorbehalten.",
+    "copyright": "© 2026 Ekreke. Alle Rechte vorbehalten.",
     "madeWith": "Gemacht mit",
     "and": "und"
   },
   "chat": {
     "title": "Mit AI chatten",
     "placeholder": "Frag mich alles...",
-    "welcome": "Hallo! Ich bin ein KI-Assistent für John Paul. Frag mich alles über seine Arbeit, Fähigkeiten oder Projekte.",
+    "welcome": "Hallo! Ich bin ein KI-Assistent für Ekreke. Frag mich nach Backend-Arbeit, Open-Source-Projekten oder technischen Fähigkeiten.",
     "send": "Senden",
     "thinking": "Denke nach..."
   },

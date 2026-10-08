@@ -41,7 +41,7 @@ export default function ChatGPTPage() {
       return `我参与过多个项目，包括：\n\n${projects.map((p, i) => `${i + 1}. **${p.title}** — ${p.description}`).join("\n\n")}`;
     }
     if (lower.includes("技术") || lower.includes("skill") || lower.includes("栈")) {
-      return `我的核心技术栈包括：${siteConfig.skills.join("、")}。我专注于构建美观且功能强大的数字体验。`;
+      return `我的核心技术栈包括：${siteConfig.skills.join("、")}。我专注于可靠的后端服务、数据密集型系统与开发者工具。`;
     }
     if (lower.includes("联系") || lower.includes("contact") || lower.includes("找到")) {
       return `你可以通过以下方式联系我：\n\n- Bento: ${siteConfig.links.bento}\n- Blog: ${siteConfig.links.blog}\n- GitHub: ${siteConfig.links.github}`;

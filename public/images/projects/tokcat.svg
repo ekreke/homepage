@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">TokCat</title>
+  <desc id="desc">A desktop companion for AI coding agents</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#0f766e"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5eead4"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <circle cx="974" cy="146" r="260" fill="#14b8a6" opacity=".18"/>
+  <path d="M0 638C236 487 404 778 657 610S1004 412 1200 519V750H0Z" fill="#0f172a" opacity=".8"/>
+  <rect x="100" y="108" width="168" height="50" rx="25" fill="#ccfbf1" opacity=".14"/>
+  <text x="132" y="141" fill="#ccfbf1" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">AI AGENT</text>
+  <text x="100" y="330" fill="white" font-family="Arial, sans-serif" font-size="116" font-weight="700">TokCat</text>
+  <text x="106" y="386" fill="#99f6e4" font-family="Arial, sans-serif" font-size="31">Token-aware desktop companion</text>
+  <rect x="100" y="485" width="574" height="104" rx="22" fill="#052e2b" stroke="#2dd4bf" stroke-opacity=".45"/>
+  <text x="138" y="548" fill="url(#accent)" font-family="Arial, sans-serif" font-size="38" font-weight="700">TOKEN / SEC</text>
+  <path d="M474 551l38-26 35 11 41-62 32 18 34-55" fill="none" stroke="#5eead4" stroke-linecap="round" stroke-linejoin="round" stroke-width="11"/>
+  <circle cx="1028" cy="408" r="140" fill="#0b1220" stroke="#5eead4" stroke-width="9"/>
+  <path d="M947 418c0-60 34-104 81-104 47 0 81 44 81 104 0 50-30 86-81 86-51 0-81-36-81-86Z" fill="#5eead4"/>
+  <path d="M962 337l30 25m102-25-30 25" stroke="#0f172a" stroke-linecap="round" stroke-width="20"/>
+  <circle cx="996" cy="414" r="10" fill="#0f172a"/><circle cx="1061" cy="414" r="10" fill="#0f172a"/>
+</svg>

@@ -70,7 +70,7 @@ export function AboutSection() {
             >
               <div className="border-l-2 border-[#c43333]/30 pl-6">
                 <p className="font-serif text-lg leading-[1.8] text-[#1a1a1a]/80 sm:text-xl">
-                  {siteConfig.bio}
+                  {t.site.bio}
                 </p>
               </div>
 
@@ -85,7 +85,7 @@ export function AboutSection() {
                   {t.about.story}
                 </h3>
                 <p className="font-serif text-base leading-[1.8] text-[#1a1a1a]/60">
-                  {siteConfig.story}
+                  {t.site.story}
                 </p>
               </div>
 
